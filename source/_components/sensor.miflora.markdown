@@ -15,6 +15,10 @@ ha_iot_class: "Local Polling"
 
 The `miflora` sensor platform allows one to monitor to plants. The [Mi Flora plant sensor](https://www.aliexpress.com/item/Newest-Original-Xiaomi-Flora-Monitor-Digital-Plants-Flowers-Soil-Water-Light-Tester-Sensor-Monitor-for-Aquarium/32685750372.html) is a small Bluetooth Low Energy device that monitors not only the moisture, but also light, temperature and conductivity. As only a single BLE device can be polled at the same time, the library implements locking to make sure this is the case.
 
+Reading from the sensor is handled by the command line tool "gatttool" that
+is part of bluez on Linux.
+No other operating systems are supported at the moment
+
 Start a scan to determine the MAC addresses of the sensor:
 
 ```bash
